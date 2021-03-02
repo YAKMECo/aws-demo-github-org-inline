@@ -15,7 +15,7 @@ resource "aws_security_group" "acme_web" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/24"]
   }
 
   # HTTP access from the VPC - changed
@@ -23,7 +23,7 @@ resource "aws_security_group" "acme_web" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/24"]
   }
 
   # outbound internet access
