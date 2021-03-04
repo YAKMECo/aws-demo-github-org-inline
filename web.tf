@@ -9,7 +9,7 @@ resource "aws_security_group" "acme_web" {
   tags = {
     Name = "acme_web"
   }
-
+  
   # SSH access from anywhere
   ingress {
     from_port   = 22
@@ -34,7 +34,6 @@ resource "aws_security_group" "acme_web" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
 
 resource "aws_security_group" "add-sec-sg" {
   name        = "add-sec-sg"
